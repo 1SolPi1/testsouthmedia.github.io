@@ -1,0 +1,8 @@
+@media screen and (max-width: 1200px) {
+    .recipe {width: 49%;}
+    .feedback_div{width: 99%;}
+   }
+
+@media screen and (max-width: 800px) {
+    .recipe {width: 99%;}
+   }   

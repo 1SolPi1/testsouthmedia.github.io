@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="main.js"></script>
+    <script src="slide.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="#" class="open" onclick="menu()" id="menu"></a>
+        </div>
+        <div class="logo">
+        <img src="images/logo.png" alt="" >
+        </div>
+        <div class="phone">
+        <a href="#" >+7 900 123 45 67</a>
+        </div>
+
+        <div class="header_menu header_menu_open" id="header_menu">
+            <div class="block_text">
+                <a href="#main" onclick="menu()"> <p class="text" style="margin-top: 100px">Вари гречу</p></a>
+                <a href="#top" onclick="menu()"> <p class="text">Топчик рецептов</p></a>
+                <a href="#feedback" onclick="menu()"> <p class="text">Горячая. Кориневая. Твоя</p></a>
+            </div>
+            <div class="menu_img">
+                <img src="images/photo_menu.png" alt="">
+            </div>
+        </div>
+    </header>
+    <div class="slider">
+        <div id="slider">
+            <div id="slider-wrapper">
+                <div class="slide">
+                    <img src="images/foto_1.jpg" alt="" />
+                    <p class="slide_text">Как понять, что греча твоё всё?</p>
+                </div>
+                <div class="slide">
+                    <img src="images/foto_2.jpg" alt="" />
+                    <p class="slide_text">Как понять, что греча твоё всё?</p>
+                </div>
+                <div class="slide">
+                    <img src="images/foto_3.jpg" alt="" />
+                    <p class="slide_text">Как понять, что греча твоё всё?</p>
+                </div>
+            </div>
+            <div id="slider-nav">
+                <a href="#" data-slide="0" class="current">1</a>
+                <a href="#" data-slide="1">2</a>
+                <a href="#" data-slide="2">3</a>
+            </div>
+        </div>
+
+    </div>
+    <main id="main">
+        <h1>Вари гречу правильно</h1>
+        <div class="recipe">
+            <p class="step">1</p>
+            <img src="images/main_1.jpg" alt="">
+            <p class="comment_step">Перебери и промой крупу<br><br></p>
+        </div>
+        <div class="recipe">
+            <p class="step">2</p>
+            <img src="images/main_2.jpg" alt="">
+            <p class="comment_step">Обжарь на сковородке в течении 4-5 минут до золотистого цвета</p>
+        </div>
+
+        <div class="recipe">
+            <p class="step">3</p>
+            <img src="images/main_3.jpg" alt="">
+            <p class="comment_step">Закинь в кипящую подсоленную воду в пропорции 1 к 2. Не наоборот!</p>
+        </div>
+
+        <div class="recipe">
+            <p class="step">4</p>
+            <img src="images/main_4.jpg" alt="">
+            <p class="comment_step">Вари на среднем огне 6-8 минут, помешивая и снимая пену пенную</p>
+        </div>
+
+        <div class="recipe">
+            <p class="step">5</p>
+            <img src="images/main_5.jpg" alt="">
+            <p class="comment_step">Сними с плиты и добавь масло ама ама хасла</p>
+        </div>
+    </main>
+    <div class="top" id="top">
+        <h1>Топчик Рецептов</h1>
+        <div class="container_top">
+                        <div class="top_img">
+                        </div>
+                        <div class="top_text">
+                            <p>Рататуй
+                                <br> с гречневой
+                                <br> кашей
+                                <br> для тебя</p>
+                        </div>
+                    </div>
+                    <div id="slider-nav" class="slider_top">
+                        <a href="#" onclick="return false" class="current">1</a>
+                        <a href="#" onclick="return false">2</a>
+                        <a href="#" onclick="return false">3</a>
+                    </div>
+    </div>
+    <div class="feedback" id="feedback">
+        <h1> Твоя греча</h1>
+        <h3>Укажи, чего ты хочешь и получи подборку блюд из гречи</h3>
+        <div class="wrapper_feedback">
+            <div class="rating feedback_div">
+                <label for="rating">Терпеть не могу гречу</label><br>
+                <input type="range" min="0" max="100" step="1" value="0" name="rating" class="rating_range" oninput="range()" id="rti">
+                <p class="rt_text">на все <br> <span id="rtv">0</span>%</p>
+            </div>
+            <div class="time feedback_div">
+                <label for="time">Время на приготовление</label>
+                <br>
+                <input type="range" min="2" max="60" step="1" value="0" name="time" class="time_range" oninput="range()" id="rtt">
+                <p class="rt_text">до
+                    <span id="rttv">0</span><br> мин</p>
+            </div>
+            <div class="like feedback_div">
+                <p class="title">Что ты любишь</p>
+                <input type="checkbox" id="option1" class="checkbox">
+                <label for="option1">Десерт</label>
+                <input type="checkbox" id="option2" class="checkbox">
+                <label for="option2">Суп</label>
+                <input type="checkbox" id="option3" class="checkbox">
+                <label for="option3">Гарнир</label>
+                <input type="checkbox" id="option4" class="checkbox">
+                <label for="option4">Мясо</label>
+            </div>
+            <div class="period feedback_div">
+                <p class="title">Время приема</p>
+                <input type="checkbox" id="option5" class="checkbox">
+                <label for="option5">Завтрак</label>
+                <input type="checkbox" id="option6" class="checkbox">
+                <label for="option6">Обед</label>
+                <input type="checkbox" id="option7" class="checkbox">
+                <label for="option7">Ужин</label>
+                <input type="checkbox" id="option8" class="checkbox">
+                <label for="option8">Ночной дожор</label>
+            </div>
+            <form action="">
+                <div class="form">
+                <label for="name">Ваше имя: <input type="text" name="name"></label>
+                </div>
+                <div class="form">
+                <label for="phone">Номер телефона:<input type="phone" name="phone" placeholder="+7 (___) ___-__-__"></label>
+                    </div>
+            </form>
+            <button>Получить по гречке</button>
+        </div>
+    </div>
+    <footer>
+<img src="images/southmedia.png" alt="">
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="jq.js"></script>
+</body>
+</html>
